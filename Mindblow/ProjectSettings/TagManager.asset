@@ -33,6 +33,15 @@ TagManager:
   - Enemigo 7
   - Undefined
   - Enemy Ball 3
+  - Trampolin
+  - Curs Navet
+  - Rebotante 1
+  - Rebotante 2
+  - Rebotante 3
+  - Rebotante 4
+  - Rebotante 5
+  - Rebotante 6
+  - Rebotante 7
   layers:
   - Default
   - TransparentFX

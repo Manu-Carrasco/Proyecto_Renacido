@@ -31,15 +31,28 @@ public class Vida : MonoBehaviour {
     public GameObject enemyBall3;
     public Transform transformEnemyBall3;
 
+    public GameObject rebotante1;
+    public Transform transformRebotante1;
+    public GameObject rebotante2;
+    public Transform transformRebotante2;
+    public GameObject rebotante3;
+    public Transform transformRebotante3;
+    public GameObject rebotante4;
+    public Transform transformRebotante4;
+    public GameObject rebotante5;
+    public Transform transformRebotante5;
+    public GameObject rebotante6;
+    public Transform transformRebotante6;
+    public GameObject rebotante7;
+    public Transform transformRebotante7;
+
+
 
     public GameObject pinchos;
     public Transform transformPinchos;
     public GameObject pinchos2;
     public Transform transformPinchos2;
 
-
-
-    public string nombnreEscena;
     public Image vida;
     public float numVida;
 
@@ -69,6 +82,21 @@ public class Vida : MonoBehaviour {
         pinchos2 = GameObject.FindGameObjectWithTag("Elemento Nocivo 2");
         transformPinchos2 = pinchos2.transform;
 
+        rebotante1 = GameObject.FindGameObjectWithTag("Rebotante 1");
+        transformRebotante1 = rebotante1.transform;
+        rebotante2 = GameObject.FindGameObjectWithTag("Rebotante 2");
+        transformRebotante2 = rebotante2.transform;
+        rebotante3 = GameObject.FindGameObjectWithTag("Rebotante 3");
+        transformRebotante3 = rebotante3.transform;
+        rebotante4 = GameObject.FindGameObjectWithTag("Rebotante 4");
+        transformRebotante4 = rebotante4.transform;
+        rebotante5 = GameObject.FindGameObjectWithTag("Rebotante 5");
+        transformRebotante5 = rebotante5.transform;
+        rebotante6 = GameObject.FindGameObjectWithTag("Rebotante 6");
+        transformRebotante6 = rebotante6.transform;
+        rebotante7 = GameObject.FindGameObjectWithTag("Rebotante 7");
+        transformRebotante7 = rebotante7.transform;
+
 
     }
 
@@ -91,7 +119,7 @@ public class Vida : MonoBehaviour {
     {
         if (numVida < 1)
         {
-            cambiarEscena(nombnreEscena);
+            SceneManager.LoadScene(sceneBuildIndex: 1);
         }
 
         if (((Mathf.Abs(transformJugador.localPosition.x - transformEnemigo.localPosition.x) <= 1.1 || Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 1.1)) ||
@@ -106,6 +134,14 @@ public class Vida : MonoBehaviour {
            ((Mathf.Abs(transformEnemyBall2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall2.localPosition.y) <= 1.1)) ||
            ((Mathf.Abs(transformEnemyBall3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall3.localPosition.y) <= 1.1)) ||
 
+           ((Mathf.Abs(transformRebotante1.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante1.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante2.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante3.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante4.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante4.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante5.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante5.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante6.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante6.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante7.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante7.localPosition.y) <= 1.1)) ||
+
            ((Mathf.Abs(transformPinchos.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos.localPosition.y) <= 0.75)) ||
            ((Mathf.Abs(transformPinchos2.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos2.localPosition.y) <= 0.75))
            )
@@ -114,11 +150,4 @@ public class Vida : MonoBehaviour {
             vida.fillAmount = numVida / 100;
         }
     }
-
-    public void cambiarEscena(string nombre)
-    {
-        SceneManager.LoadScene(nombre);
-    }
-
-
 }

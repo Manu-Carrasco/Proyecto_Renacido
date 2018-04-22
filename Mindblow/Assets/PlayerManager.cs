@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
@@ -7,6 +8,8 @@ public class PlayerManager : MonoBehaviour {
 	Rigidbody2D player;
 
 	public Transform NAVE;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -41,5 +44,15 @@ public class PlayerManager : MonoBehaviour {
 			player.velocity = new Vector2 (0, 5);
 		}
 
-	}
+        if (col.gameObject.tag == "Trampolin") //|| col.tag == "OtroEnemigo")
+        {
+            player.velocity = new Vector2(0, 100);
+        }
+
+        if (col.gameObject.tag == "Curs Navet")
+        {
+            SceneManager.LoadScene("prova", LoadSceneMode.Single);
+        }
+
+    }
 }

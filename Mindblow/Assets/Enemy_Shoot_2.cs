@@ -44,7 +44,7 @@ public class Enemy_Shoot_2 : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Player_Bullet" || col.gameObject.tag == "Player_Sword")
+        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Player_Bullet" || col.gameObject.tag == "Player_Sword" || col.gameObject.tag == "Enemigo 4")
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
@@ -53,7 +53,7 @@ public class Enemy_Shoot_2 : MonoBehaviour {
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Enemigo 4")
         {
             Destroy(gameObject);
         }

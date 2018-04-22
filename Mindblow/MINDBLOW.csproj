@@ -78,6 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Coque_bola.cs" />
+    <Compile Include="Assets\Curs_Navet_paso.cs" />
+    <Compile Include="Assets\Cus_Move.cs" />
     <Compile Include="Assets\DoorCollisionCheck.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Enemy_Inmortal.cs" />
@@ -103,6 +106,7 @@
     <Compile Include="Assets\Position_Enemy_5.cs" />
     <Compile Include="Assets\Position_Enemy_6.cs" />
     <Compile Include="Assets\Position_Enemy_7.cs" />
+    <Compile Include="Assets\Rebote.cs" />
     <Compile Include="Assets\Teledirigido.cs" />
     <Compile Include="Assets\c_sharp.cs" />
     <Compile Include="Assets\c_sharp2.cs" />
