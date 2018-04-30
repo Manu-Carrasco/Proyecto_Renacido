@@ -51,7 +51,7 @@ public class Enemy_Shoot : MonoBehaviour {
         }
     }
 
-    void OnCollisionStay2D(Collision2D col)
+    void OnCollisionEntry2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {

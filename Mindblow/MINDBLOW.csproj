@@ -82,6 +82,7 @@
     <Compile Include="Assets\Curs_Navet_paso.cs" />
     <Compile Include="Assets\Cus_Move.cs" />
     <Compile Include="Assets\DoorCollisionCheck.cs" />
+    <Compile Include="Assets\Door_Info.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Enemy_Inmortal.cs" />
     <Compile Include="Assets\Enemy_Shoot.cs" />
@@ -101,13 +102,17 @@
     <Compile Include="Assets\Movimiento_enemigo_5.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\NewBehaviourScript1.cs" />
+    <Compile Include="Assets\NewBehaviourScript2.cs" />
+    <Compile Include="Assets\NewBehaviourScript3.cs" />
     <Compile Include="Assets\PlayerManager.cs" />
     <Compile Include="Assets\PositionPlayer.cs" />
     <Compile Include="Assets\Position_Enemy_5.cs" />
     <Compile Include="Assets\Position_Enemy_6.cs" />
     <Compile Include="Assets\Position_Enemy_7.cs" />
     <Compile Include="Assets\Rebote.cs" />
+    <Compile Include="Assets\Rotacion_compas.cs" />
     <Compile Include="Assets\Teledirigido.cs" />
+    <Compile Include="Assets\Trampilla.cs" />
     <Compile Include="Assets\c_sharp.cs" />
     <Compile Include="Assets\c_sharp2.cs" />
     <Compile Include="Assets\c_sharp3.cs" />
