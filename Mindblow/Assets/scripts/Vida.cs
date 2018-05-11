@@ -102,7 +102,7 @@ public class Vida : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
@@ -117,50 +117,37 @@ public class Vida : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //if (numVida > 1)
-        //{
-        //    SceneManager.LoadScene(sceneBuildIndex: 1);
-        //}
-
-        //if (((Mathf.Abs(transformJugador.localPosition.x - transformEnemigo.localPosition.x) <= 1.1 || Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo2.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo3.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo4.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo4.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo5.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo5.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo6.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo6.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformEnemigo7.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo7.localPosition.y) <= 1.1)) ||
-
-        //   ((Mathf.Abs(transformEnemyBall.localPosition.x - transformJugador.localPosition.x) <= 1.4) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall.localPosition.y) <= 1.4)) ||
-        //   ((Mathf.Abs(transformEnemyBall2.localPosition.x - transformJugador.localPosition.x) <= 1.4) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall2.localPosition.y) <= 1.4)) ||
-        //   ((Mathf.Abs(transformEnemyBall3.localPosition.x - transformJugador.localPosition.x) <= 1.4) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall3.localPosition.y) <= 1.4)) ||
-
-        //   ((Mathf.Abs(transformRebotante1.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante1.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante2.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante3.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante4.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante4.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante5.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante5.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante6.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante6.localPosition.y) <= 1.1)) ||
-        //   ((Mathf.Abs(transformRebotante7.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante7.localPosition.y) <= 1.1)) ||
-
-        //   ((Mathf.Abs(transformPinchos.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos.localPosition.y) <= 0.75)) ||
-        //   ((Mathf.Abs(transformPinchos2.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos2.localPosition.y) <= 0.75))
-        //   )
-        //{
-        //    numVida -= 2;
-        //    vida.fillAmount = numVida / 100;
-        //}
-
-        vida.fillAmount = numVida / 100;
-        //print(numVida);
-
-    }
-
-    private void Damage (float damage)
-    {
-        numVida = numVida - damage;
         if (numVida < 1)
         {
             SceneManager.LoadScene(sceneBuildIndex: 1);
+        }
+
+        if (((Mathf.Abs(transformJugador.localPosition.x - transformEnemigo.localPosition.x) <= 1.1 || Mathf.Abs(transformEnemigo.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo2.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo3.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo4.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo4.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo5.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo5.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo6.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo6.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemigo7.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemigo7.localPosition.y) <= 1.1)) ||
+
+           ((Mathf.Abs(transformEnemyBall.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemyBall2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall2.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformEnemyBall3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformEnemyBall3.localPosition.y) <= 1.1)) ||
+
+           ((Mathf.Abs(transformRebotante1.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante1.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante2.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante2.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante3.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante3.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante4.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante4.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante5.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante5.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante6.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante6.localPosition.y) <= 1.1)) ||
+           ((Mathf.Abs(transformRebotante7.localPosition.x - transformJugador.localPosition.x) <= 1.1) && (Mathf.Abs(transformJugador.localPosition.y - transformRebotante7.localPosition.y) <= 1.1)) ||
+
+           ((Mathf.Abs(transformPinchos.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos.localPosition.y) <= 0.75)) ||
+           ((Mathf.Abs(transformPinchos2.localPosition.x - transformJugador.localPosition.x) <= 1.6) && (Mathf.Abs(transformJugador.localPosition.y - transformPinchos2.localPosition.y) <= 0.75))
+           )
+        {
+            numVida -= 2;
+            vida.fillAmount = numVida / 100;
         }
     }
 }

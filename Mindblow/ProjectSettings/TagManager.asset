@@ -42,16 +42,6 @@ TagManager:
   - Rebotante 5
   - Rebotante 6
   - Rebotante 7
-  - Puerta 1
-  - Puerta 2
-  - Puerta 3
-  - Puerta 4
-  - Puerta 5
-  - Puerta 6
-  - Puerta 7
-  - Puerta 8
-  - Puerta 9
-  - Puerta 10
   layers:
   - Default
   - TransparentFX
